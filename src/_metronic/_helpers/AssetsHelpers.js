@@ -1,10 +1,14 @@
+console.log('aaa');
+console.log(process.env.REACT_APP_API_URL);
+
 export function removeCSSClass(ele, cls) {
-    const reg = new RegExp("(\\s|^)" + cls + "(\\s|$)");
-    ele.className = ele.className.replace(reg, " ");
+  const reg = new RegExp('(\\s|^)' + cls + '(\\s|$)');
+  ele.className = ele.className.replace(reg, ' ');
 }
 
 export function addCSSClass(ele, cls) {
-    ele.classList.add(cls);
+  ele.classList.add(cls);
 }
 
 export const toAbsoluteUrl = pathname => process.env.PUBLIC_URL + pathname;
+export const toAbsoluteAvatarUrl = pathname => process.env.REACT_APP_PUBLIC_URL + '/public/images/users/' + pathname;
