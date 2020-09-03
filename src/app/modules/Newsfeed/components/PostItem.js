@@ -4,6 +4,7 @@ import {useSelector} from 'react-redux';
 import {toAbsoluteUrl, toAbsoluteAvatarUrl} from '../../../../_metronic/_helpers';
 import SVG from 'react-inlinesvg';
 import {FormattedMessage, injectIntl} from 'react-intl';
+import TextareaAutosize from 'react-textarea-autosize';
 
 const PostItem = props => {
   const {user} = useSelector(state => state.auth);
@@ -390,7 +391,7 @@ const PostItem = props => {
               alignItems: 'center',
               overflow: 'hidden',
             }}>
-            <textarea
+            <TextareaAutosize
               className="AutoSizeInput form-control border-0 m-1"
               placeholder="Viết bình luận..."
               autoCapitalize="sentences"
@@ -399,14 +400,14 @@ const PostItem = props => {
                 flexShrink: 1,
                 padding: '0px 10px',
                 fontSize: '1em',
-                maxHeight: '150px',
-                minHeight: '25px',
+
                 resize: 'none',
                 background: 'transparent',
                 boxSizing: 'border-box',
               }}
               defaultValue={''}
               rows={1}
+              maxRows={6}
             />
             <div className="TouchableOpacity  ">
               <div className="Image " style={{width: '26px', height: '26px', margin: '3px'}}>
