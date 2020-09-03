@@ -8,6 +8,7 @@ import objectPath from 'object-path';
 import {useHtmlClassService} from '../../../_core/MetronicLayout';
 import {toAbsoluteUrl} from '../../../../_helpers';
 import {DropdownTopbarItemToggler} from '../../../../_partials/dropdowns';
+import {FormattedMessage} from 'react-intl';
 
 export function UserProfileDropdown() {
   const {user} = useSelector(state => state.auth);
@@ -23,7 +24,9 @@ export function UserProfileDropdown() {
     <Dropdown drop="down" alignRight>
       <Dropdown.Toggle as={DropdownTopbarItemToggler} id="dropdown-toggle-user-profile">
         <div className={'btn btn-icon w-auto btn-clean d-flex align-items-center btn-lg px-2'}>
-          <span className="text-muted font-weight-bold font-size-base d-none d-md-inline mr-1">Hi,</span>
+          <span className="text-muted font-weight-bold font-size-base d-none d-md-inline mr-1">
+            <FormattedMessage id="MENU.HELLO" />,
+          </span>
           <span className="text-dark-50 font-weight-bolder font-size-base d-none d-md-inline mr-3">{user.fullName[0]}</span>
           <span className="symbol symbol-35 symbol-light-success">
             <span className="symbol-label font-size-h5 font-weight-bold">{user.fullName}</span>

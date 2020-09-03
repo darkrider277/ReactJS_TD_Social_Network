@@ -35,7 +35,7 @@ export function LanguageSelectorDropdown() {
             <Tooltip id="language-panel-tooltip">Select Language</Tooltip>
           }
         >
-          <div className="btn btn-icon btn-clean btn-dropdown btn-lg mr-1">
+          <div className="btn btn-icon btn-hover-transparent-white btn-dropdown btn-lg mr-1 pulse pulse-white">
             <img
               className="h-25px w-25px rounded"
               src={currentLanguage.flag}

@@ -32,10 +32,10 @@ export function UserNotificationsDropdown() {
       {layoutProps.offcanvas && (
         <div className="topbar-item">
           <div
-            className="btn btn-icon btn-clean btn-lg mr-1 pulse pulse-primary"
+            className="btn btn-icon btn-hover-transparent-white btn-dropdown btn-lg mr-1 pulse pulse-white"
             id="kt_quick_notifications_toggle"
           >
-            <span className="svg-icon svg-icon-xl svg-icon-primary">
+            <span className="svg-icon svg-icon-xl">
               <SVG src={toAbsoluteUrl("/media/svg/icons/Code/Compiling.svg")} />
             </span>
             <span className="pulse-ring"></span>
@@ -57,10 +57,10 @@ export function UserNotificationsDropdown() {
               }
             >
               <div
-                className="btn btn-icon btn-clean btn-lg mr-1 pulse pulse-primary"
+                className="btn btn-icon btn-hover-transparent-white btn-dropdown btn-lg mr-1 pulse pulse-white"
                 id="kt_quick_notifications_toggle"
               >
-                <span className="svg-icon svg-icon-xl svg-icon-primary">
+                <span className="svg-icon svg-icon-xl">
                   <SVG
                     src={toAbsoluteUrl("/media/svg/icons/Code/Compiling.svg")}
                   />

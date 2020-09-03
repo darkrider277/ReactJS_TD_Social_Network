@@ -1,5 +1,11 @@
 {
+  "CHAT.MENU.MENU":"Message",
+  "NEWSFEED.MENU.GROUP":"Group",
+  "NEWSFEED.MENU.FEELING_ACTIVITY":"Feeling/Activity",
+  "NEWSFEED.MENU.PHOTO_VIDEO":"Photo/Video",
+  "NEWSFEED.MENU.TAG_FRIEND":"Tag friend",
   "TRANSLATOR.SELECT": "Select your language",
+  "MENU.HELLO": "Hi",
   "MENU.NEW": "new",
   "MENU.ACTIONS": "Actions",
   "MENU.CREATE_POST": "Create New Post",
