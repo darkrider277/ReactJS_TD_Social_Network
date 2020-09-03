@@ -9,7 +9,7 @@ const NewPost = props => {
   const {user} = useSelector(state => state.auth);
 
   return (
-    <div className="card">
+    <div className="card gutter-b feed-item">
       <div className="card-body p-4">
         {/*begin::Top*/}
         <div className="d-flex align-items-center">
