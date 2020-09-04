@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export const GLOBAL_URL = 'http://demo.tandan.com.vn:8084';
+export const GLOBAL_URL = process.env.REACT_APP_GLOBAL_URL;
 
 export const LOGIN_URL = '/v1/auth/login';
 export const REGISTER_URL = '/v1/auth/register';
@@ -12,8 +12,8 @@ export function login(username, password) {
   return axios.post(GLOBAL_URL + LOGIN_URL, {username, password});
 }
 
-export function register(username, email, fullname, password) {
-  return axios.post(GLOBAL_URL + REGISTER_URL, {username, email, fullname, password});
+export function register(data) {
+  return axios.post(GLOBAL_URL + REGISTER_URL, data);
 }
 
 export function requestPassword(email) {
