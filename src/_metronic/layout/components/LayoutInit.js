@@ -17,6 +17,8 @@ import KTLayoutQuickPanel from "../../_assets/js/layout/extended/quick-panel";
 import KTLayoutQuickUser from "../../_assets/js/layout/extended/quick-user";
 import KTLayoutQuickChat from "../../_assets/js/layout/extended/quick-chat";
 
+import KTAppChat from  "../../_assets/js/layout/extended/chatapp";
+
 
 export function LayoutInit() {
   useLayoutEffect(() => {
@@ -71,6 +73,8 @@ export function LayoutInit() {
       KTLayoutQuickUser.init('kt_quick_user');
 
       KTLayoutQuickChat.init('kt_quick_chat');
+
+     // KTAppChat.init('kt_chat_aside','kt_chat_content');
       
     });
   }, []);

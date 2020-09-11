@@ -10,6 +10,8 @@ const ReactBootstrapPage = lazy(() => import('./modules/ReactBootstrapExamples/R
 const ECommercePage = lazy(() => import('./modules/ECommerce/pages/eCommercePage'));
 
 const NewfeedPage = lazy(() => import('./modules/Newsfeed/pages/NewsfeedPage'));
+const FriendsPage = lazy(() => import('./modules/Friends/pages/friendsPage'));
+const ChatsPage = lazy(() => import('./modules/Chats/pages/chatPage'));
 
 export default function BasePage() {
   // useEffect(() => {
@@ -32,6 +34,8 @@ export default function BasePage() {
         <Route path="/e-commerce" component={ECommercePage} />
 
         <Route path="/newsfeed" component={NewfeedPage} />
+        <Route path="/friends" component={FriendsPage} />
+        <Route path="/chat" component={ChatsPage} />
 
         <Redirect to="error/error-v1" />
       </Switch>

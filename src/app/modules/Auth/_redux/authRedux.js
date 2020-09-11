@@ -18,12 +18,13 @@ const initialAuthState = {
 };
 
 export const reducer = persistReducer(
-  {storage, key: 'v709-demo1-auth', whitelist: ['user', 'authToken']},
+  {storage, key: 'TanDanJSCv1', whitelist: ['user', 'authToken']},
   (state = initialAuthState, action) => {
     switch (action.type) {
       case actionTypes.Login: {
         const {authToken, refreshToken, user} = action.payload;
-
+        window.localStorage.setItem('accessToken', JSON.stringify(authToken));
+        window.localStorage.setItem('refreshToken', JSON.stringify(refreshToken));
         return {authToken, refreshToken, user};
       }
 
@@ -35,6 +36,8 @@ export const reducer = persistReducer(
 
       case actionTypes.Logout: {
         // TODO: Change this code. Actions in reducer aren't allowed.
+        window.localStorage.removeItem("accessToken");
+        window.localStorage.removeItem("refreshToken");
         return initialAuthState;
       }
 

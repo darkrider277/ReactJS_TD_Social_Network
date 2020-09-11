@@ -1,9 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import PropTypes from 'prop-types';
 import {useSelector} from 'react-redux';
-import {toAbsoluteUrl, toAbsoluteAvatarUrl} from '../../../../_metronic/_helpers';
-import SVG from 'react-inlinesvg';
-import {FormattedMessage, injectIntl} from 'react-intl';
 
 import PostItem from './PostItem';
 

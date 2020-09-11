@@ -103,3 +103,34 @@
 .cursor-default {
   cursor: default !important;
 }
+
+.scroll-y {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.scroll-x {
+  overflow-x: auto !important;
+}
+
+/* Let's get this party started */
+.scroll-y::-webkit-scrollbar {
+  width: 4px;
+  border-radius: 0.42rem !important;
+}
+
+/* Track */
+.scroll-y::-webkit-scrollbar-track {
+  -webkit-border-radius: 0.42rem;
+  border-radius: 0.42rem;
+}
+
+/* Handle */
+.scroll-y::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 0.42rem;
+  border-radius: 0.42rem;
+  background: #e4e6ef;
+}
+.scroll-y::-webkit-scrollbar-thumb:window-inactive {
+  background: #e4e6ef;
+}

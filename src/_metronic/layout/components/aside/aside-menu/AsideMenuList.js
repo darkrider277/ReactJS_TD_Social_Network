@@ -49,8 +49,8 @@ export function AsideMenuList({layoutProps}) {
         {/*end::1 Level*/}
 
         {/*begin::1 Level*/}
-        <li className={`menu-item ${getMenuItemActive('/builder', false)}`} aria-haspopup="true">
-          <NavLink className="menu-link" to="/builder">
+        <li className={`menu-item ${getMenuItemActive('/friends', false)}`} aria-haspopup="true">
+          <NavLink className="menu-link" to="/friends">
             <span className="svg-icon menu-icon">
               <SVG src={toAbsoluteUrl('/media/svg/icons/Home/Library.svg')} />
             </span>
@@ -69,7 +69,7 @@ export function AsideMenuList({layoutProps}) {
         </li>
         {/*end::1 Level*/}
         {/*begin::1 Level*/}
-        <li className={`menu-item ${getMenuItemActive('/builder', false)}`} aria-haspopup="true">
+        <li className={`menu-item ${getMenuItemActive('/chat', false)}`} aria-haspopup="true">
           <NavLink className="menu-link" to="/chat">
             <span className="svg-icon menu-icon">
               <SVG src={toAbsoluteUrl('/media/svg/icons/Communication/Group-chat.svg')} />

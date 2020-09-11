@@ -1,4 +1,6 @@
 export default function setupAxios(axios, store) {
+  console.log('bbbb');
+
   axios.interceptors.request.use(
     config => {
       const {
