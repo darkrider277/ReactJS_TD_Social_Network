@@ -1,6 +1,6 @@
 exports.isAuthenticated = () => {
   if (typeof window === 'undefined') return true;
-  let data = window.localStorage.getItem('accessToken');
+  let data = window.localStorage.getItem('Token');
 
   if (data) {
     return true;
@@ -10,9 +10,10 @@ exports.isAuthenticated = () => {
 
 exports.getAccessToken = () => {
   if (typeof window === 'undefined') return true;
-  let data = window.localStorage.getItem('accessToken');
+  let token = window.localStorage.getItem('Token');
 
-  if (data) {
+  if (token) {
+    let data = JSON.parse(token).accessToken;
     return data;
   }
   return null;
@@ -20,11 +21,14 @@ exports.getAccessToken = () => {
 
 exports.getRefreshToken = () => {
   if (typeof window === 'undefined') return true;
-  let data = window.localStorage.getItem('refreshToken');
 
-  if (data) {
+  let token = window.localStorage.getItem('Token');
+
+  if (token) {
+    let data = JSON.parse(token).refreshToken;
     return data;
   }
+
   return null;
 };
 

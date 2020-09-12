@@ -2,7 +2,7 @@ import axios from 'axios';
 import {isAuthenticated, getAccessToken} from '../utils/tokenHelpers';
 
 const globalAPI = axios.create({
-  baseURL: `${process.env.REACT_APP_API_URI}`,
+  baseURL: `${process.env.REACT_APP_GLOBAL_URL}`,
 });
 
 globalAPI.interceptors.request.use(

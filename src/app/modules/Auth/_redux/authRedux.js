@@ -23,21 +23,19 @@ export const reducer = persistReducer(
     switch (action.type) {
       case actionTypes.Login: {
         const {authToken, refreshToken, user} = action.payload;
-        window.localStorage.setItem('accessToken', JSON.stringify(authToken));
-        window.localStorage.setItem('refreshToken', JSON.stringify(refreshToken));
-        return {authToken, refreshToken, user};
+        window.localStorage.setItem('Token', JSON.stringify({accessToken: authToken, refreshToken}));
+        return {authToken, refreshToken, user: undefined};
       }
 
       case actionTypes.Register: {
         const {authToken, refreshToken, user} = action.payload;
 
-        return {authToken, refreshToken, user};
+        return {authToken, refreshToken, user: undefined};
       }
 
       case actionTypes.Logout: {
         // TODO: Change this code. Actions in reducer aren't allowed.
-        window.localStorage.removeItem("accessToken");
-        window.localStorage.removeItem("refreshToken");
+        window.localStorage.removeItem('Token');
         return initialAuthState;
       }
 
@@ -65,11 +63,11 @@ export const actions = {
 
 export function* saga() {
   yield takeLatest(actionTypes.Login, function* loginSaga() {
-    //yield put(actions.requestUser());
+    yield put(actions.requestUser());
   });
 
   yield takeLatest(actionTypes.Register, function* registerSaga() {
-    //yield put(actions.requestUser());
+    yield put(actions.requestUser());
   });
 
   yield takeLatest(actionTypes.UserRequested, function* userRequested() {
