@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import {useSelector, useDispatch} from 'react-redux';
 import InfiniteScroll from 'react-infinite-scroller';
 
 import {Input, Layout, Menu, Badge, Row, Button, Dropdown, Tooltip} from 'antd';
@@ -7,6 +8,8 @@ import SearchBar from '../components/SearchBar';
 import ListConversation from '../components/ListConversation';
 
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+
+import {actions} from '../_redux/chatRedux';
 
 const {Sider, Header} = Layout;
 
@@ -17,6 +20,16 @@ const Topic = () => (
 );
 
 const NewsPage = props => {
+  const dispatch = useDispatch();
+  const listConversation = useSelector(state => state.chat.listConversation);
+  console.log('aaaaaaa');
+  console.log(listConversation);
+
+  useEffect(() => {
+    dispatch(actions.ChatGetListConversationRequested());
+    return () => {};
+  }, [dispatch]);
+
   const [heightChatAside, setHeightChatAside] = useState(null);
 
   const data = [

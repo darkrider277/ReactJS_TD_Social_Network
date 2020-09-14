@@ -1,4 +1,3 @@
-import axios from 'axios';
 import globalAPI from '../../../../services/globalAPI';
 
 export const GLOBAL_URL = process.env.REACT_APP_GLOBAL_URL;

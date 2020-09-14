@@ -45,6 +45,7 @@
         "antd": "^4.6.2",
         "apexcharts": "3.19.2",
         "axios": "0.19.2",
+        "axios-auth-refresh": "^3.0.0",
         "axios-mock-adapter": "1.18.1",
         "bootstrap": "4.5.0",
         "clipboard-copy": "3.1.0",
