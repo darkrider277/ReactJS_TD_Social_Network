@@ -1,4 +1,7 @@
 {
+  "AUTH.TITLE":"SOCIAL NETWORK",
+  "AUTH.TITLE.SUB":"...",
+
   "CHAT.MENU.MENU":"Message",
   "NEWSFEED.MENU.GROUP":"Group",
   "NEWSFEED.MENU.FEELING_ACTIVITY":"Feeling/Activity",
@@ -23,6 +26,8 @@
   "AUTH.GENERAL.LEGAL": "Legal",
   "AUTH.GENERAL.CONTACT": "Contact",
   "AUTH.LOGIN.TITLE": "Login Account",
+  "AUTH.LOGIN.SUBTITLE": "Enter your username and password",
+  "AUTH.LOGINSSO.BUTTON": "Sign In SSO",
   "AUTH.LOGIN.BUTTON": "Sign In",
   "AUTH.FORGOT.TITLE": "Forgotten Password?",
   "AUTH.FORGOT.DESC": "Enter your email to reset your password",
