@@ -7,7 +7,7 @@ export const LOGIN_URL = '/v1/auth/login';
 export const REGISTER_URL = '/v1/auth/register';
 export const REQUEST_PASSWORD_URL = 'api/auth/forgot-password';
 
-export const ME_URL = '/v1/user/profile';
+export const ME_URL = '/v1/user/GetUserInfo';
 
 export function login(username, password) {
   return globalAPI.post(LOGIN_URL, {username, password});
