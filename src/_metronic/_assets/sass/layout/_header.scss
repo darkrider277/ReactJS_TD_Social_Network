@@ -19,6 +19,7 @@
 			right: 0;
 			left: 0;
 			z-index: get($header-config, desktop, fixed, zindex);
+			background-color: get($header-config, desktop, bg-color);
 		}
 
 		// Aside Enabled Mode

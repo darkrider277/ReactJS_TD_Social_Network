@@ -44,6 +44,11 @@ function Login(props) {
       ),
   });
 
+  const SignInSSO = () => {
+    console.log('sso');
+    window.open(`${process.env.REACT_APP_SSO_LOGIN}`, '_self');
+  };
+
   const enableLoading = () => {
     setLoading(true);
   };
@@ -98,7 +103,9 @@ function Login(props) {
         <h3 className="font-size-h1">
           <FormattedMessage id="AUTH.LOGIN.TITLE" />
         </h3>
-        <p className="text-muted font-weight-bold">Enter your username and password</p>
+        <p className="text-muted font-weight-bold">
+          <FormattedMessage id="AUTH.LOGIN.SUBTITLE" />
+        </p>
       </div>
       {/* end::Head */}
 
@@ -145,15 +152,26 @@ function Login(props) {
           ) : null}
         </div>
         <div className="form-group d-flex flex-wrap justify-content-between align-items-center">
-          <Link to="/auth/forgot-password" className="text-dark-50 text-hover-primary my-3 mr-2" id="kt_login_forgot">
-            <FormattedMessage id="AUTH.GENERAL.FORGOT_BUTTON" />
-          </Link>
+          <button
+            id="kt_login_signin_SSO_submit"
+            type="button"
+            className={`btn btn-primary font-weight-bold px-9 py-4 my-3`}
+            onClick={() => {
+              SignInSSO();
+            }}>
+            <span>
+              <FormattedMessage id="AUTH.LOGINSSO.BUTTON" />
+            </span>
+            {loading && <span className="ml-3 spinner spinner-white"></span>}
+          </button>
           <button
             id="kt_login_signin_submit"
             type="submit"
             disabled={formik.isSubmitting}
             className={`btn btn-primary font-weight-bold px-9 py-4 my-3`}>
-            <span>Sign In</span>
+            <span>
+              <FormattedMessage id="AUTH.LOGIN.BUTTON" />
+            </span>
             {loading && <span className="ml-3 spinner spinner-white"></span>}
           </button>
         </div>

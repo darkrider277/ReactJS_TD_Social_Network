@@ -15,6 +15,10 @@ import KTLayoutStickyCard from "../../_assets/js/layout/base/sticky-card";
 import KTLayoutStretchedCard from "../../_assets/js/layout/base/stretched-card";
 import KTLayoutQuickPanel from "../../_assets/js/layout/extended/quick-panel";
 import KTLayoutQuickUser from "../../_assets/js/layout/extended/quick-user";
+import KTLayoutQuickChat from "../../_assets/js/layout/extended/quick-chat";
+
+import KTAppChat from  "../../_assets/js/layout/extended/chatapp";
+
 
 export function LayoutInit() {
   useLayoutEffect(() => {
@@ -67,6 +71,11 @@ export function LayoutInit() {
 
       // Init Quick User Panel
       KTLayoutQuickUser.init('kt_quick_user');
+
+      KTLayoutQuickChat.init('kt_quick_chat');
+
+     // KTAppChat.init('kt_chat_aside','kt_chat_content');
+      
     });
   }, []);
   return <></>;

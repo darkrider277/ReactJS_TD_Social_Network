@@ -1,44 +1,45 @@
 /* eslint-disable no-restricted-imports */
 /* eslint-disable no-script-url,jsx-a11y/anchor-is-valid */
-import React, {useMemo} from "react";
-import {OverlayTrigger, Tooltip} from "react-bootstrap";
-import {useSelector} from "react-redux";
-import objectPath from "object-path";
-import {useHtmlClassService} from "../../_core/MetronicLayout";
-import {UserProfileDropdown} from "./dropdowns/UserProfileDropdown";
+import React, {useMemo} from 'react';
+import {OverlayTrigger, Tooltip} from 'react-bootstrap';
+import {useSelector} from 'react-redux';
+import objectPath from 'object-path';
+import {useHtmlClassService} from '../../_core/MetronicLayout';
+import {UserProfileDropdown} from './dropdowns/UserProfileDropdown';
+import {FormattedMessage} from 'react-intl';
 
 export function QuickUserToggler() {
   const {user} = useSelector(state => state.auth);
   const uiService = useHtmlClassService();
   const layoutProps = useMemo(() => {
     return {
-      offcanvas: objectPath.get(uiService.config, "extras.user.layout") === "offcanvas",
+      offcanvas: objectPath.get(uiService.config, 'extras.user.layout') === 'offcanvas',
     };
   }, [uiService]);
 
-  return (<>
-        {layoutProps.offcanvas && (<OverlayTrigger
-            placement="bottom"
-            overlay={<Tooltip id="quick-user-tooltip">View user</Tooltip>}
-        >
+  return (
+    <>
+      {layoutProps.offcanvas && (
+        <OverlayTrigger placement="bottom" overlay={<Tooltip id="quick-user-tooltip">View user</Tooltip>}>
           <div className="topbar-item">
-            <div className="btn btn-icon w-auto btn-clean d-flex align-items-center btn-lg px-2"
-                 id="kt_quick_user_toggle">
+            <div
+              className="btn btn-icon btn-hover-transparent-white w-auto d-flex align-items-center btn-lg px-2"
+              id="kt_quick_user_toggle">
               <>
-
-                <span className="text-muted font-weight-bold font-size-base d-none d-md-inline mr-1">Hi,</span>
-                <span className="text-dark-50 font-weight-bolder font-size-base d-none d-md-inline mr-3">
-                  {user.fullname}
+                <span className="text-white opacity-50 font-weight-bold font-size-base d-none d-md-inline mr-1">
+                  <FormattedMessage id="MENU.HELLO" />,
                 </span>
-                <span className="symbol symbol-35 symbol-light-success">                
-                    <span className="symbol-label font-size-h5 font-weight-bold">{user.fullName[0]}</span>
+                <span className="text-white font-weight-bolder font-size-base d-none d-md-inline mr-3">{user.fullName}</span>
+                <span className="symbol symbol-35 symbol-light-success">
+                  <span className="symbol-label font-size-h5 font-weight-bold text-white bg-white-o-30">{user.fullName[0]}</span>
                 </span>
               </>
             </div>
           </div>
-        </OverlayTrigger>)}
+        </OverlayTrigger>
+      )}
 
-        {!layoutProps.offcanvas && (<UserProfileDropdown/>)}
-      </>
+      {!layoutProps.offcanvas && <UserProfileDropdown />}
+    </>
   );
 }

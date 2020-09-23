@@ -63,10 +63,10 @@ export function Topbar() {
             data-placement="right"
           >
             <div
-              className="btn btn-icon btn-clean btn-lg mr-1"
+              className="btn btn-icon btn-hover-transparent-white btn-dropdown btn-lg mr-1 pulse pulse-white"
               id="kt_quick_panel_toggle"
             >
-              <span className="svg-icon svg-icon-xl svg-icon-primary">
+              <span className="svg-icon svg-icon-xl">
                 <SVG
                   src={toAbsoluteUrl(
                     "/media/svg/icons/Layout/Layout-4-blocks.svg"

@@ -1,15 +1,15 @@
 // 3rd-party Plugins
-@import "~highlight.js/styles/googlecode.css";
-@import "~perfect-scrollbar/css/perfect-scrollbar.css";
+@import '~highlight.js/styles/googlecode.css';
+@import '~perfect-scrollbar/css/perfect-scrollbar.css';
 
 // Theme Styles
-@import "./_metronic/_assets/sass/style.react.scss";
+@import './_metronic/_assets/sass/style.react.scss';
 
 // Default Layout themes
-@import "./_metronic/_assets/sass/themes/layout/header/base/light.scss";
-@import "./_metronic/_assets/sass/themes/layout/header/menu/light.scss";
-@import "./_metronic/_assets/sass/themes/layout/brand/dark.scss";
-@import "./_metronic/_assets/sass/themes/layout/aside/dark.scss";
+@import './_metronic/_assets/sass/themes/layout/header/base/light.scss';
+@import './_metronic/_assets/sass/themes/layout/header/menu/light.scss';
+@import './_metronic/_assets/sass/themes/layout/brand/light.scss';
+@import './_metronic/_assets/sass/themes/layout/aside/light.scss';
 
 // Header themes
 // Light
@@ -25,11 +25,11 @@
 
 // Brand themes
 .brand-dark {
-  @import "./_metronic/_assets/sass/themes/layout/brand/dark.scss";
+  @import './_metronic/_assets/sass/themes/layout/brand/dark.scss';
 }
 // Light
 .brand-light {
-  @import "./_metronic/_assets/sass/themes/layout/brand/light.scss";
+  @import './_metronic/_assets/sass/themes/layout/brand/light.scss';
 }
 
 // Aside themes
@@ -45,20 +45,19 @@
 .example-highlight > pre {
   background: none transparent !important;
   margin: 0 !important;
-  padding-top: 0.5rem; 
-  code { 
-      overflow-y: auto;
-      display: block;
+  padding-top: 0.5rem;
+  code {
+    overflow-y: auto;
+    display: block;
 
-      span {
-        background: none transparent !important;
-      }
+    span {
+      background: none transparent !important;
+    }
   }
 }
 
 .json > pre {
   background: none #fff !important;
-
 }
 
 .example-code > .json {
@@ -78,12 +77,12 @@
 .react-bootstrap-table {
   th {
     outline: none;
-   
-    &.sortable {  
+
+    &.sortable {
       .svg-icon-sort {
         opacity: 0;
       }
-  
+
       &:hover {
         cursor: pointer;
 
@@ -91,16 +90,47 @@
           opacity: 1;
         }
       }
-    }    
+    }
   }
 
   .table.table-head-custom thead tr {
     .sortable-active {
-        color: $primary !important;
+      color: $primary !important;
     }
   }
 }
 
 .cursor-default {
   cursor: default !important;
+}
+
+.scroll-y {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.scroll-x {
+  overflow-x: auto !important;
+}
+
+/* Let's get this party started */
+.scroll-y::-webkit-scrollbar {
+  width: 4px;
+  border-radius: 0.42rem !important;
+}
+
+/* Track */
+.scroll-y::-webkit-scrollbar-track {
+  -webkit-border-radius: 0.42rem;
+  border-radius: 0.42rem;
+}
+
+/* Handle */
+.scroll-y::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 0.42rem;
+  border-radius: 0.42rem;
+  background: #e4e6ef;
+}
+.scroll-y::-webkit-scrollbar-thumb:window-inactive {
+  background: #e4e6ef;
 }

@@ -1,12 +1,12 @@
-import React from "react";
-import {Route} from "react-router-dom";
-import {Content} from "./Content";
+import React from 'react';
+import {Route} from 'react-router-dom';
+import {Content} from './Content';
 
-export function ContentRoute({ children, component, render, ...props }) {
+export function ContentRoute({children, component, render, ...props}) {
   return (
     <Route {...props}>
       {routeProps => {
-        if (typeof children === "function") {
+        if (typeof children === 'function') {
           return <Content>{children(routeProps)}</Content>;
         }
 
@@ -19,9 +19,7 @@ export function ContentRoute({ children, component, render, ...props }) {
         }
 
         if (component) {
-          return (
-            <Content>{React.createElement(component, routeProps)}</Content>
-          );
+          return <Content>{React.createElement(component, routeProps)}</Content>;
         }
 
         if (render) {

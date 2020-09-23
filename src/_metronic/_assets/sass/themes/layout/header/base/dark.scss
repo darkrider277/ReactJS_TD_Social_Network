@@ -137,7 +137,7 @@ $topbar-shadow-mobile: 0px 0px 40px 0px rgba(82,63,105, 0.1);
 @include media-breakpoint-down(md) {
 	// Topbar
 	.topbar {
-		background-color: $header-bg;
+		background-color: $facebook-color;
 		box-shadow: none;
 
 		.topbar-mobile-on & {
