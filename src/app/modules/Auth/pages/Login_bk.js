@@ -98,7 +98,9 @@ function Login(props) {
         <h3 className="font-size-h1">
           <FormattedMessage id="AUTH.LOGIN.TITLE" />
         </h3>
-        <p className="text-muted font-weight-bold">Enter your username and password</p>
+        <p className="text-muted font-weight-bold">
+          <FormattedMessage id="AUTH.LOGIN.SUBTITLE" />
+        </p>
       </div>
       {/* end::Head */}
 
@@ -153,7 +155,9 @@ function Login(props) {
             type="submit"
             disabled={formik.isSubmitting}
             className={`btn btn-primary font-weight-bold px-9 py-4 my-3`}>
-            <span>Sign In</span>
+            <span>
+              <FormattedMessage id="AUTH.LOGIN.BUTTON" />
+            </span>
             {loading && <span className="ml-3 spinner spinner-white"></span>}
           </button>
         </div>

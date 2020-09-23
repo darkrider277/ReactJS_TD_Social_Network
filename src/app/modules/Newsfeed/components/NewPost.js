@@ -26,7 +26,7 @@ const NewPost = props => {
             </span>
             <FormattedMessage id="NEWSFEED.MENU.PHOTO_VIDEO" />
           </div>
-          <div className="btn btn-hover-text-primary btn-hover-icon-primary btn-sm btn-text-dark-50 bg-hover-light-primary rounded font-weight-bolder font-size-sm p-2 mr-2">
+          {/*<div className="btn btn-hover-text-primary btn-hover-icon-primary btn-sm btn-text-dark-50 bg-hover-light-primary rounded font-weight-bolder font-size-sm p-2 mr-2">
             <span className="svg-icon svg-icon-xl">
               <SVG src={toAbsoluteUrl('/media/svg/icons/Communication/Add-user.svg')} />
             </span>
@@ -37,7 +37,7 @@ const NewPost = props => {
               <SVG src={toAbsoluteUrl('/media/svg/icons/General/Smile.svg')} />
             </span>
             <FormattedMessage id="NEWSFEED.MENU.FEELING_ACTIVITY" />
-          </div>
+  </div> */}
           <div className="btn btn-hover-text-primary btn-hover-icon-primary btn-sm btn-text-dark-50 bg-hover-light-primary rounded font-weight-bolder font-size-sm p-2 mr-2">
             <span className="svg-icon svg-icon-xl">
               <SVG src={toAbsoluteUrl('/media/svg/icons/Communication/Group.svg')} />

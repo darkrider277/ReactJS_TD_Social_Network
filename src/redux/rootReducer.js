@@ -2,22 +2,22 @@ import {all} from 'redux-saga/effects';
 import {combineReducers} from 'redux';
 
 import * as auth from '../app/modules/Auth/_redux/authRedux';
-import * as chat from '../app/modules/Chats/_redux/chatRedux';
-
 import {customersSlice} from '../app/modules/ECommerce/_redux/customers/customersSlice';
 import {productsSlice} from '../app/modules/ECommerce/_redux/products/productsSlice';
+import {friendsSlice} from '../app/modules/Friends/_redux/friendsSlice';
+
 import {remarksSlice} from '../app/modules/ECommerce/_redux/remarks/remarksSlice';
 import {specificationsSlice} from '../app/modules/ECommerce/_redux/specifications/specificationsSlice';
 
 export const rootReducer = combineReducers({
   auth: auth.reducer,
-  chat: chat.reducer,
   customers: customersSlice.reducer,
   products: productsSlice.reducer,
+  friends: friendsSlice.reducer,
   remarks: remarksSlice.reducer,
   specifications: specificationsSlice.reducer,
 });
 
 export function* rootSaga() {
-  yield all([auth.saga(), chat.saga()]);
+  yield all([auth.saga()]);
 }

@@ -1,21 +1,21 @@
-import {createSlice} from "@reduxjs/toolkit";
+import {createSlice} from '@reduxjs/toolkit';
 
-const initialProductsState = {
+const initialFriendsState = {
   listLoading: false,
   actionsLoading: false,
   totalCount: 0,
   entities: null,
-  productForEdit: undefined,
-  lastError: null
+  friendForEdit: undefined,
+  lastError: null,
 };
 export const callTypes = {
-  list: "list",
-  action: "action"
+  list: 'list',
+  action: 'action',
 };
 
-export const productsSlice = createSlice({
-  name: "products",
-  initialState: initialProductsState,
+export const friendsSlice = createSlice({
+  name: 'friends',
+  initialState: initialFriendsState,
   reducers: {
     catchError: (state, action) => {
       state.error = `${action.type}: ${action.payload.error}`;
@@ -36,12 +36,12 @@ export const productsSlice = createSlice({
     // getProductById
     productFetched: (state, action) => {
       state.actionsLoading = false;
-      state.productForEdit = action.payload.productForEdit;
+      state.friendForEdit = action.payload.friendForEdit;
       state.error = null;
     },
     // findProducts
-    productsFetched: (state, action) => {
-      const { totalCount, entities } = action.payload;
+    friendsFetched: (state, action) => {
+      const {totalCount, entities} = action.payload;
       state.listLoading = false;
       state.error = null;
       state.entities = entities;
@@ -65,7 +65,7 @@ export const productsSlice = createSlice({
       });
     },
     // deleteProduct
-    productDeleted: (state, action) => {
+    huyKetBaned: (state, action) => {
       state.error = null;
       state.actionsLoading = false;
       state.entities = state.entities.filter(el => el.id !== action.payload.id);
@@ -74,21 +74,19 @@ export const productsSlice = createSlice({
     productsDeleted: (state, action) => {
       state.error = null;
       state.actionsLoading = false;
-      state.entities = state.entities.filter(
-        el => !action.payload.ids.includes(el.id)
-      );
+      state.entities = state.entities.filter(el => !action.payload.ids.includes(el.id));
     },
     // productsUpdateState
     productsStatusUpdated: (state, action) => {
       state.actionsLoading = false;
       state.error = null;
-      const { ids, status } = action.payload;
+      const {ids, status} = action.payload;
       state.entities = state.entities.map(entity => {
         if (ids.findIndex(id => id === entity.id) > -1) {
           entity.status = status;
         }
         return entity;
       });
-    }
-  }
+    },
+  },
 });
