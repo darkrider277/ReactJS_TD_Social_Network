@@ -1,29 +1,26 @@
-import React, {useLayoutEffect} from "react";
-import {KTUtil} from "../../_assets/js/components/util";
-import KTLayoutHeader from "../../_assets/js/layout/base/header";
-import KTLayoutHeaderMenu from "../../_assets/js/layout/base/header-menu";
-import KTLayoutHeaderTopbar from "../../_assets/js/layout/base/header-topbar";
-import KTLayoutBrand from "../../_assets/js/layout/base/brand";
-import KTLayoutAside from "../../_assets/js/layout/base/aside";
-import KTLayoutAsideToggle from "../../_assets/js/layout/base/aside-toggle";
-import KTLayoutAsideMenu from "../../_assets/js/layout/base/aside-menu";
-import KTLayoutContent from "../../_assets/js/layout/base/content";
-import KTLayoutFooter from "../../_assets/js/layout/base/footer";
-import KTLayoutSubheader from "../../_assets/js/layout/base/subheader";
-import KTLayoutScrolltop from "../../_assets/js/layout/extended/scrolltop";
-import KTLayoutStickyCard from "../../_assets/js/layout/base/sticky-card";
-import KTLayoutStretchedCard from "../../_assets/js/layout/base/stretched-card";
-import KTLayoutQuickPanel from "../../_assets/js/layout/extended/quick-panel";
-import KTLayoutQuickUser from "../../_assets/js/layout/extended/quick-user";
-import KTLayoutQuickChat from "../../_assets/js/layout/extended/quick-chat";
-
-import KTAppChat from  "../../_assets/js/layout/extended/chatapp";
-
+import React, {useLayoutEffect} from 'react';
+import {KTUtil} from '../../_assets/js/components/util';
+import KTLayoutHeader from '../../_assets/js/layout/base/header';
+import KTLayoutHeaderMenu from '../../_assets/js/layout/base/header-menu';
+import KTLayoutHeaderTopbar from '../../_assets/js/layout/base/header-topbar';
+import KTLayoutBrand from '../../_assets/js/layout/base/brand';
+import KTLayoutAside from '../../_assets/js/layout/base/aside';
+import KTLayoutAsideToggle from '../../_assets/js/layout/base/aside-toggle';
+import KTLayoutAsideMenu from '../../_assets/js/layout/base/aside-menu';
+import KTLayoutContent from '../../_assets/js/layout/base/content';
+import KTLayoutFooter from '../../_assets/js/layout/base/footer';
+import KTLayoutSubheader from '../../_assets/js/layout/base/subheader';
+import KTLayoutScrolltop from '../../_assets/js/layout/extended/scrolltop';
+import KTLayoutStickyCard from '../../_assets/js/layout/base/sticky-card';
+import KTLayoutStretchedCard from '../../_assets/js/layout/base/stretched-card';
+import KTLayoutQuickPanel from '../../_assets/js/layout/extended/quick-panel';
+import KTLayoutQuickUser from '../../_assets/js/layout/extended/quick-user';
+import KTLayoutQuickChat from '../../_assets/js/layout/extended/quick-chat';
 
 export function LayoutInit() {
   useLayoutEffect(() => {
     // Initialization
-    KTUtil.ready(function () {
+    KTUtil.ready(function() {
       ////////////////////////////////////////////////////
       // Layout Base Partials(mandatory for core layout)//
       ////////////////////////////////////////////////////
@@ -51,7 +48,6 @@ export function LayoutInit() {
       // Init Footer
       KTLayoutFooter.init('kt_footer');
 
-
       //////////////////////////////////////////////
       // Layout Extended Partials(optional to use)//
       //////////////////////////////////////////////
@@ -74,8 +70,7 @@ export function LayoutInit() {
 
       KTLayoutQuickChat.init('kt_quick_chat');
 
-     // KTAppChat.init('kt_chat_aside','kt_chat_content');
-      
+      // KTAppChat.init('kt_chat_aside','kt_chat_content');
     });
   }, []);
   return <></>;

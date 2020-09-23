@@ -72,10 +72,9 @@ export function UserProfileDropdown() {
                 <i className="flaticon2-calendar-3 text-success" />
               </div>
               <div className="navi-text">
-                <div className="font-weight-bold">My Profile</div>
+                <div className="font-weight-bold">Tài khoản</div>
                 <div className="text-muted">
-                  Account settings and more
-                  <span className="label label-light-danger label-inline font-weight-bold">update</span>
+                  Thông tin tài khoản
                 </div>
               </div>
             </div>
@@ -87,8 +86,8 @@ export function UserProfileDropdown() {
                 <i className="flaticon2-mail text-warning"></i>
               </div>
               <div className="navi-text">
-                <div className="font-weight-bold">My Messages</div>
-                <div className="text-muted">Inbox and tasks</div>
+                <div className="font-weight-bold">Thay đổi hình đại diện</div>
+                <div className="text-muted">Thanh đổi ảnh đại diện của bạn bằng hình ảnh khác</div>
               </div>
             </div>
           </a>
