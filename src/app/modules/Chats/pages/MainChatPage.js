@@ -21,9 +21,11 @@ const Topic = () => (
 
 const NewsPage = props => {
   const dispatch = useDispatch();
-  const listConversation = useSelector(state => state.chat.listConversation);
+  //let listConversation = useSelector(state => state.chat.listConversation);
   console.log('aaaaaaa');
   console.log(listConversation);
+
+  let listConversation = [];
 
   useEffect(() => {
     dispatch(actions.ChatGetListConversationRequested());

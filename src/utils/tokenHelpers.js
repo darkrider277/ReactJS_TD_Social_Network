@@ -3,7 +3,9 @@ exports.isAuthenticated = () => {
   let data = window.localStorage.getItem('Token');
 
   if (data) {
-    return true;
+    let token = JSON.parse(data).accessToken;
+    return token;
+    //return true;
   }
   return false;
 };
